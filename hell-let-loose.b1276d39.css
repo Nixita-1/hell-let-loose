@@ -1,14 +1,10 @@
 html {
   box-sizing: border-box;
   --main-text-colour: #2f4f4f;
-  --background-colour: #fff;
+  --background-colour: #eee;
   --rank-color: #8b0000;
   font-weight: 700;
   line-height: 100%;
-}
-
-.athlet__pay, .athlet__sport {
-  opacity: 0;
 }
 
 body {
@@ -31,6 +27,7 @@ body {
 
 .highest-paid-atlets .athlet {
   transition: transform 1s;
+  position: relative;
 }
 
 .highest-paid-atlets .athlet__name {
@@ -42,7 +39,7 @@ body {
 
 .highest-paid-atlets .athlet:hover {
   background-color: var(--background-colour);
-  border-radius: 10px;
+  border-radius: 15px;
   transform: scale(1.2);
 }
 
@@ -72,11 +69,28 @@ body {
   font-size: 16px;
   display: flex;
   position: absolute;
-  top: 48%;
-  right: 8%;
+  top: 40%;
+  right: 5%;
 }
 
 .highest-paid-atlets .athlet__details {
   margin-top: 8px;
+}
+
+.highest-paid-atlets .athlet__info {
+  opacity: 0;
+  color: #000;
+  text-align: center;
+  background-color: var(--background-colour);
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  position: absolute;
+}
+
+.highest-paid-atlets .athlet:hover .athlet__info {
+  opacity: 1;
 }
 /*# sourceMappingURL=hell-let-loose.b1276d39.css.map */
