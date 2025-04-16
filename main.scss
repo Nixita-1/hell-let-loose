@@ -1,1 +1,86 @@
+html {
+  font-weight: 700;
+  line-height: 100%;
+  box-sizing: border-box;
+  --main-text-colour: #2F4F4F;
+  --background-colour: #fff;
+  --rank-color: #8B0000;
+}
 
+.athlet__pay {
+  opacity: 0;
+}
+
+.athlet__sport {
+  opacity: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.highest-paid-atlets {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  padding: 30px 150px;
+  gap: 40px 30px;
+  justify-content: center;
+
+  @media (min-width: 1000px) {
+      grid-template-columns: repeat(4, 200px);
+  }
+
+  .athlet {
+      transition: transform 1s ease;
+
+      &__name {
+        display: block;
+        font-size: 20px;
+        color: var(--main-text-colour);
+        text-align: center;
+    }
+
+      &:hover {
+        transform: scale(1.2);
+        background-color: var(--background-colour);
+        border-radius: 10px;
+      }
+
+      &__img {
+          height: auto;
+          width: 100%;
+          border-radius: 50%;
+          transition: border-radius 1s ease;
+      }
+
+      &:hover .athlet__img {
+          border-radius: 25%;
+        }
+
+      &__photo {
+        position: relative;
+      }
+      
+      &__rank {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          color: var(--rank-color);
+          font-size: 16px;
+
+          width: 32px;
+          height: 32px;
+          background-color: var(--background-colour);
+          border-radius: 50%;
+
+          position: absolute;
+          top: 48%;
+          right: 8%;  
+      }
+
+      &__details {
+          margin-top: 8px;
+      }
+  }
+}
